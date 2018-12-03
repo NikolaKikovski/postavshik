@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}
+{{ object_list.0.company.name }}
+{% endblock %}
+{% block left-side-bar %}
+adsaf
+{% endblock %}
+{% block content %}
+<div class="card" style="margin-top: 5px">
+    <div class="card-header">
+        Товары {{ object_list.0.company.name }}
+    </div>
+    <div class="card-body">
+        {% for i in object_list %}
+        <div class="card border-primary" style="margin-bottom: 15px">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="card-img" src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="col-md-10">
+                        <table class="table table-bordered table-sm">
+                            <tbody>
+                            <tr>
+                                <td>Наименование:</td>
+                                <td>{{ i.name }}</td>
+                            </tr>
+                            <tr>
+                                <td>Цена:</td>
+                                                                <td>{{ i.price }}</td>
+
+                            </tr>
+                            <tr>
+                                <td>Примечание:</td>                                <td>{{ i.name }}</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a type="button" class="btn btn-outline-success btn-sm float-right">Заказать</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock %}
+{% block right-side-bar %}
+<div class="row">
+    <div class="col-md-12" style="margin-top: 5px">
+        <div class="card border-success">
+            <img class="card-img-top" src="data:image/jpeg;base64,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">
+
+        <div class="card-body">
+            <h5 class="card-title">{{ object_list.0.company.name }}</h5>
+        </div>
+               <table class="table table-sm">
+                   <tbody>
+                            <tr>
+                                <td>Наименование:</td>
+                            </tr>
+                            <tr>
+                                <td>Цена:</td>
+                            </tr>
+                            <tr>
+                                <td>Примечание:</td>
+                            </tr>
+                            </tbody>
+               </table>
+            </div>
+    </div>
+</div>
+    {% endblock %}
